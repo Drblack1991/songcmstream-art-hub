@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        songcm: {
+          primary: '#8C52FF',
+          secondary: '#FF5287',
+          dark: '#1A1F2C',
+          light: '#FFFFFF',
+          background: '#121212',
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,12 +92,25 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-light': {
+          '0%, 100%': { opacity: '0.6' },
+          '50%': { opacity: '1' }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-light': 'pulse-light 2s infinite ease-in-out',
+        'float': 'float 6s infinite ease-in-out'
+			},
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif']
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

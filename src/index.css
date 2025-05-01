@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,10 +16,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 267 100% 66%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 339 100% 66%; 
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -52,8 +55,8 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 8%;
+    --foreground: 0 0% 100%;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -61,10 +64,10 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 267 100% 66%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 339 100% 66%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -96,6 +99,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-songcm-dark text-songcm-light font-poppins;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-songcm-primary hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-lg transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-songcm-secondary hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-lg transition-all;
+  }
+  
+  .audio-player {
+    @apply w-full bg-gray-800 rounded-lg p-4;
+  }
+  
+  .audio-progress {
+    @apply w-full h-1 bg-gray-600 rounded-full mt-2 mb-4 cursor-pointer;
+  }
+  
+  .audio-controls {
+    @apply flex justify-between items-center;
   }
 }
